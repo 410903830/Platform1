@@ -1,0 +1,82 @@
+﻿@model Platform.Models.signmember
+
+@{
+    ViewBag.Title = "療癒之森";
+}
+<style>
+    body {
+        background-color: #A4DA8A;
+    }
+
+    .window_content {
+        position: relative;
+        width: 400px;
+        height: 650px;
+        margin: 0 auto;
+        top: 20px;
+        border-radius: 5px;
+        background-color: #ffffff;
+    }
+</style>
+
+<h1 style="text-align: center; padding: 50px 0px 0px 0px; color: white;">療癒之森</h1>
+
+
+
+
+<div class="container">
+    <div class="window_content">
+        <div class="window_content_bodt">
+            @using (Html.BeginForm())
+            {
+
+                <div style=" padding-bottom:10px; padding-top:20px; text-align:center; font-size:30px; ">註冊</div>
+
+                <div class="form-group">
+
+                    <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                        @Html.EditorFor(model => model.name, new { htmlAttributes = new { @class = "form-control", placeholder = "暱稱", @style = "background-color:#F2ECE2;" } })
+                        @Html.ValidationMessageFor(model => model.name, "", new { @class = "text-danger" })
+                    </div>
+                    <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                        @Html.EditorFor(model => model.account, new { htmlAttributes = new { @class = "form-control", placeholder = "帳號", @style = "background-color:#F2ECE2;" } })
+                        @Html.ValidationMessageFor(model => model.account, "", new { @class = "text-danger" })
+                    </div>
+                    <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                        @Html.PasswordFor(model => model.password, new { @class = "form-control", placeholder = "密碼 ", @style = "background-color:#F2ECE2;" })
+                        @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+                    </div>
+                    <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                        @Html.PasswordFor(model => model.confirm_password, new { @class = "form-control", placeholder = "確認密碼 ", @style = "background-color:#F2ECE2;" })
+                        @Html.ValidationMessageFor(model => model.confirm_password, "", new { @class = "text-danger" })
+                    </div>
+                    <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                        @Html.EditorFor(model => model.email, new { htmlattributes = new { @class = "form-control", placeholder = "信箱", @style = "background-color:#F2ECE2;" } })
+                        @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+                    </div>
+                    <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                        @Html.EditorFor(model => model.code, new { htmlAttributes = new { @class = "form-control", placeholder = "驗證碼", @style = "background-color:#F2ECE2;" } })
+                        @Html.ValidationMessageFor(model => model.code, "", new { @class = "text-danger" })
+                    </div>
+                    <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                        @Html.EditorFor(model => model.birthday, new { htmlAttributes = new { @class = "form-control", @style = "background-color:#F2ECE2;" } })
+                        @Html.ValidationMessageFor(model => model.birthday, "", new { @class = "text-danger" })
+                    </div>
+                    <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                        <input type="submit" value="註冊" class="btn btn-default  form-control" , style="background-color:#97CD7D;" />
+                    </div>
+                </div>
+
+            }
+
+        </div>
+    </div>
+    </div>
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+
+

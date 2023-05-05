@@ -1,0 +1,73 @@
+﻿@model Platform.Models.member_info
+@{
+    ViewBag.Title = "會員資料";
+}
+
+<style>
+    body {
+        background-color: #A4DA8A;
+    }
+
+    .window_content {
+        position: relative;
+        width: 400px;
+        height: 450px;
+        margin: 0 auto;
+        top: 20px;
+        border-radius: 5px;
+        background-color: #ffffff;
+    }
+</style>
+
+<h1 style="padding:50px 0px 0px 0px; color:white; text-align:center;">療癒之森</h1>
+
+
+
+
+
+<div class="container">
+<div class="window_content">
+    <div class="window_content_body">
+ 
+        <div style=" padding-bottom:10px; padding-top:20px; text-align:center; font-size:30px; ">會員資料</div>
+
+
+            <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                @Html.LabelFor(model => model.name)
+                @Html.Label("User", new { @style = "padding-left: 40px;" })
+            </div>
+
+
+            <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                @Html.LabelFor(model => model.account)
+                @Html.Label("Account1", new { @style = "padding-left: 40px;" })
+            </div>
+
+
+            <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                @Html.LabelFor(model => model.email)
+                @Html.Label("Account@gmailcom", new { @style = "padding-left: 40px;" })
+            </div>
+
+
+            <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                @Html.LabelFor(model => model.birthday)
+                @Html.Label("1999/01/01", new { @style = "padding-left: 40px;" })
+            </div>
+
+
+            <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                @Html.LabelFor(model => model.indentity)
+                @Html.Label("一般會員", new { @style = "padding-left: 40px;" })
+            </div>
+
+            <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                <input type="submit" value="修改會員資料" class="btn btn-default  form-control" , style="background-color:#97CD7D;" />
+                </div>
+
+            </div>
+    </div>
+    </div>
+
+
+

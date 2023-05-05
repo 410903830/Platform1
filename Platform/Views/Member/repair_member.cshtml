@@ -1,0 +1,73 @@
+﻿@model Platform.Models.Member
+
+@{
+    ViewBag.Title = "修改會員資料";
+}
+
+<style>
+    body {
+        background-color: #A4DA8A;
+    }
+
+    .window_content {
+        position: relative;
+        width: 400px;
+        height: 550px;
+        margin: 0 auto;
+        top: 20px;
+        border-radius: 5px;
+        background-color: #ffffff;
+    }
+
+
+</style>
+
+<h1 style="text-align: center; padding: 50px 0px 0px 0px; color: white;">療癒之森</h1>
+
+
+<div class="container">
+    <div class="window_content">
+        <div class="window_content_bodt">
+            @using (Html.BeginForm())
+            {
+            <div class="form-group">
+
+                <div style=" padding-bottom:10px; padding-top:20px; text-align:center; font-size:30px; ">修改會員資料</div>
+
+                <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                    @Html.Label("暱稱")
+                    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @placeholder = "User1" } })
+                </div>
+
+
+                <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                    @Html.LabelFor(model => model.Account)
+                    @Html.EditorFor(model => model.Account, new { htmlAttributes = new { @class = "form-control", @placeholder = "Account" } })
+                </div>
+
+                <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                    @Html.LabelFor(model => model.Email)
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @placeholder = "Account@gmail.com" } })
+                </div>
+
+
+                <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                    @Html.LabelFor(model => model.Password)
+                    @Html.PasswordFor(model => model.Password, new { @class = "form-control", @placeholder = "**********" })
+                </div>
+
+
+                <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                    @Html.LabelFor(model => model.CorrectPassword)
+                    @Html.PasswordFor(model => model.CorrectPassword, new { @class = "form-control", @placeholder = "**********" })
+                </div>
+                <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
+                    <input type="submit" value="修改會員資料" class="btn btn-default  form-control" , style="background-color:#97CD7D;">
+                </div>
+
+            </div>
+                }
+            </div>
+    </div>
+</div>
+
