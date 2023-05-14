@@ -50,13 +50,16 @@
                         <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
                             <input type="submit" value="登入" class="btn btn-default  form-control" , style="background-color:#97CD7D;" />
                         </div>
-                        <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
-                            @Html.ActionLink("註冊帳號", "Sign")
-                            @Html.ActionLink("忘記密碼", "forget_password")
-                        </div>
-                    </div>
 
-                </div>
+                        @Html.ActionLink("註冊帳號", "Sign", null, null, new { style = "float:left; padding-left:80px" })
+
+                        @Html.ActionLink("忘記密碼", "forget_password", null, null, new { style = "float:right; padding-right:80px" })
+                        
+
+                    </div>
+    
+
+                    </div>
 
                     }
                 </div>
