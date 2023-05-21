@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "Page";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+
+<style>
+
+    body {
+        background-color: #DBF0D0;
+    }
+
+    .header {
+        height: 75px;
+        background-color: #A4DA8A;
+        display: flex;
+        border-radius: 10px;
+        position:sticky;
+        top:0;
+    }
+
+    .header-name {
+        color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-family: fantasy;
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    .row {
+        width: 100%;
+        columns: 2;
+    }
+
+    .header-list {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        float: right;
+    }
+
+        .header-list a {
+            font-size: 20px;
+            padding-bottom: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+    .hint:hover {
+        color: #2b7008;
+    }
+
+    .container {
+        width: 60%;
+        height: 525px;
+        background-color: white;
+        margin: 50px auto 50px auto;
+        border-radius: 10px;
+    }
+
+
+        .container #title {
+            font-size: 30px;
+            font-weight: 400;
+            padding-top: 10px;
+            padding-left: 30px;
+        }
+
+        .container .row {
+            height: 140px;
+            width: 100%;
+            background-color: #A4DA8A;
+            opacity: 0.3;
+            margin: 10px auto 10px auto;
+        }
+
+    footer {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        margin-buttom: -50%;
+    }
+</style>
+
+<div class="container">
+    <p id="title">工作版</p>
+    <div class="row" id="ex1"></div>
+    <div class="row" id="ex2"></div>
+    <div class="row" id="ex3"></div>
+
+</div>
+

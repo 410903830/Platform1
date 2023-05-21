@@ -177,6 +177,12 @@
     <Content Include="Views\Member\repair_member.cshtml" />
     <Content Include="Views\Member\Apply_expert.cshtml" />
     <Content Include="Views\Member\Check_in.cshtml" />
+    <Content Include="Views\Member\LoginPage.cshtml" />
+    <Content Include="Views\Shared\_LayoutLoginPage.cshtml" />
+    <Content Include="Views\Member\Page.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage.cshtml" />
+    <Content Include="Views\Shared\_LayoutPostArticle.cshtml" />
+    <Content Include="Views\Member\PostArticle.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
