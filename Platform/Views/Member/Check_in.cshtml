@@ -1,10 +1,9 @@
 ﻿
+<div class="md">
 
-
-<div style="text-align: center; padding-top: 100px;">
-    <input type="button" id="button" class="button" value="簽到" onclick="myfun()">
-</div>
-<div class="container td">
+    <div>
+        <h1 id="month" style="text-align: center; padding-top:20px;">月份</h1>
+    </div>
 
     <div class="week_list " style="padding-top: 10px;">
         <ul>
@@ -21,14 +20,16 @@
     <div class="week_list">
         <ul id="day"></ul>
     </div>
+</div>
 
-
+<div style="text-align: center; padding-top: 70px;">
+    <input type="button" id="button" class="button" value="簽到" onclick="myfun()">
 </div>
 
 
 @section Scripts {
-    @Scripts.Render("~/bundles/date")
-    @Styles.Render("~/Content/date")
+    @Scripts.Render("~/bundles/date?version=1")
+    @Styles.Render("~/Content/date?version=15")
 }
 
 

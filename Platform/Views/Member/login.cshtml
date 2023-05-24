@@ -9,13 +9,26 @@
 
     .window_content {
         position: relative;
-        width: 411px;
+        width: 470px;
         height: 445px;
-        margin: 0 auto;
+        margin:auto;
         top: 20px;
         border-radius: 5px;
         background-color: #ffffff;
     }
+
+    @@media screen and (max-width:769px) {
+        .window_content {
+            position: relative;
+            width: 100%;
+            height: 445px;
+            margin:auto;
+            top: 20px;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+    }
+
 </style>
 
 

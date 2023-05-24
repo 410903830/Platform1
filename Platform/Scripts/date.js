@@ -1,6 +1,9 @@
 ﻿
 
-    var month_normal = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+var month_normal = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+
+//月份字形轉換陣列
+var month_number = ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二']
 
     var date = new Date();
     var year = date.getFullYear();
@@ -8,7 +11,10 @@
     var day = date.getDay();   //星期幾
     var day1 = date.getDate(); //當天日期
 
+
+    //連接介面ID
     var holder = document.getElementById("day");
+    var monthText = document.getElementById("month");
 
 
     //獲取當月第一天是星起幾
@@ -22,10 +28,18 @@
         return month_normal[month];
     }
 
+    //將月份進行轉換
+    function month_n(month) {
+        return month_number[month];
+    }
+
     function refreshDate() {
 
-        //獲取該月天數
-        var totalDay = daymonth(month, year);
+    //獲取月份字形
+    var Month = month_n(month);
+
+    //獲取該月天數
+    var totalDay = daymonth(month, year);
     var firstDay = dateStart(month, year);
     var myclass;
     var str = "";
@@ -43,7 +57,10 @@
     str += "<li>" + i + "</li>";
 }
         }
-holder.innerHTML = str;
+        holder.innerHTML = str;
+
+        /*inner 月份*/
+        monthText.innerHTML = Month + "月";
 
     }
 
