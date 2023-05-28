@@ -99,25 +99,56 @@
             color: rgb(114, 113, 113);
         }
 
-    .context {
+    .container .context .context-title input {
+        font-size:30px;
+        width:80%;
+        margin:10px auto auto 5%;
+        border:none;
     }
 
-    .container .context input {
-        display: flex;
-        padding-left: 5%;
-        padding-top: 1%;
-        font-size: 20px;
+    .container .context .context-text textarea {
+        font-size: 30px;
+        width: 80%;
+        height:200px;
+        margin: 10px auto auto 5%;
         border: none;
-        outline: none;
+        resize:none;
     }
 
-    .container button {
-        margin-top: 10%;
-        margin-left: 90%;
+    .container .context .context-url input {
+        font-size: 30px;
+        width: 80%;
+        margin: 10px auto auto 5%;
+        border: none;
+    }
+    .container .context .context-btn {
+        width: 80%;
+        margin: -30px auto auto 80%;
+        border: none;
+    }
+
+    .container .context .context-btn  button{
+        background-color:white;
+        border:none;
+        border-radius:15px;
+        font-size:15px;
+
+    }
+
+    .container .context .context-btn button:hover{
+       background-color:red;
+
+    }
+
+
+
+    .container .submit {
         background-color: #A4DA8A;
         border-radius: 50px;
         width: 80px;
         height: 50px;
+        float:right;
+        margin: 10% 5% auto auto;
     }
 </style>
 
@@ -136,12 +167,24 @@
     </div>
 
     <div class="context">
+
+        <div class="context-title">
         <input type="text" name="標題" placeholder="標題">
-        <br>
-        <input type="text" name="內文" placeholder="內文">
-        <br>
+        </div>
+
+        <div class="context-text">
+        <textarea type="text" name="內文" placeholder="內文"></textarea>
+        </div>
+
+        <div class="context-url">
         <input type="text" name="圖片網址" placeholder="圖片網址">
+        </div>
+        <div class="context-btn">
+            <button class="upload">上傳</button>
+        </div>
+
     </div>
-    <button type="submit">送出</button>
+
+    <button class="submit" type="submit">送出</button>
 </div>
    

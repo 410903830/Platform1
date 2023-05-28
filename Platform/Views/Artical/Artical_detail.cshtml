@@ -1,0 +1,219 @@
+﻿
+@{
+    ViewBag.Title = "Artical_detail";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+
+
+<style>
+
+    body {
+        background-color: #DBF0D0;
+    }
+
+    .header {
+        height: 75px;
+        background-color: #A4DA8A;
+        display: flex;
+        border-radius: 10px;
+        position: sticky;
+        top: 0;
+    }
+
+    .header-name {
+        color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-family: fantasy;
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    .row {
+        width: 100%;
+        columns: 2;
+    }
+
+    .header-list {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        float: right;
+    }
+
+        .header-list a {
+            font-size: 20px;
+            padding-bottom: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+    .hint:hover {
+        font-size: 25px;
+        font-weight: 900;
+        color: #2b7008;
+    }
+
+    .container {
+        width: 60%;
+        height: max-content;
+        background-color: white;
+        margin: 50px auto 50px auto;
+        border-radius: 10px;
+    }
+
+        .container .title {
+            width: 100%;
+            height: max-content;
+            column-count: 4;
+        }
+
+        .container .a-title {
+            font-size: 20px;
+            font-weight: bolder;
+            margin-left: 50px;
+        }
+
+        .container .a-user {
+            font-size: 18px;
+            font-weight: bolder;
+            padding-top: 25px;
+        }
+
+        .container .a-time {
+            padding-top: 25px;
+            margin-left: -75%;
+        }
+
+        .container .a-dot {
+            font-size: 25px;
+            float: right;
+            margin-right: 40%;
+            margin-top: 5%;
+            font-weight: bolder;
+        }
+
+    .context {
+        margin-top: 50px;
+        padding-bottom: 50px;
+    }
+
+        .context .context-article p {
+            margin-left: 8%;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .context .context-article .cr-text {
+            width: 100%;
+            text-align: center;
+        }
+
+        .context .context-article textarea {
+            width: 80%;
+            height: 200px;
+            border: none;
+            resize: none;
+        }
+
+        .context .context-img {
+            margin-top: 50px;
+            margin-left: 8%;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .context .context-message {
+            margin-top: 50px;
+            margin-left: 8%;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+    .cd-message {
+        margin-left: 5%;
+        width: 80%;
+        height: 600px;
+        background-color: #E0E0E0;
+    }
+
+    .cn-footer {
+        column-count: 3;
+        text-align: center;
+    }
+
+    .cn-footer a{
+        color: black;
+        text-decoration: none;
+    }
+
+
+    footer {
+        position: relative;
+        height: 3em;
+        width: 100%;
+        text-align: center;
+        bottom: 0%;
+    }
+</style>
+
+
+
+
+
+<div class="container">
+    <div class="title">
+        <p class="a-title">文章標題</p>
+        <p class="a-user">User</p>
+        <p class="a-time">4/6 16:42</p>
+        <p class="a-dot">...</p>
+    </div>
+
+    <div class="context">
+        <div class="context-article">
+            <p>文章內容</p>
+            <div class="cr-text">
+                <textarea name="" id="">什麼是憂鬱症？憂鬱症的定義是？
+憂鬱症是一種精神官能症，對人事物失去興趣甚至感到悲傷，且持續一段時間，初期不容易被發現。憂鬱症和單純情緒不好是不一樣的，多數人不會再難過低潮的情緒持續太久，但憂鬱症會維持相當長的一段時間，對於人的感受、行為和思考都會造成影響，嚴重的會造成身體機能問題，影響正常的起居生活、睡眠和工作(1)。台灣憂鬱症防治協會提到目前診斷憂鬱症的標準共有9個症狀，其中只要有5個症狀持續超過兩週，且大部分時間都有達到標準，就要小心得到憂鬱症，症狀包括(2)：
+
+1.憂鬱情緒：快樂不起來、煩躁、鬱悶
+
+2.興趣與喜樂減少：提不起興趣
+
+3.體重下降(或增加)或食慾下降 (或增加)
+
+4.失眠(或嗜睡)：難入睡或整天想睡
+
+5.精神運動性遲滯(或激動)：思考動作變緩慢
+
+6.疲累失去活力：整天想躺床、體力變差
+
+7.無價值感或罪惡感：覺得活著沒意思、自責難過，都是負面的想法
+
+8.無法專注、無法決斷：腦筋變鈍、矛盾猶豫、無法專心
+
+9.反覆想到死亡，甚至有自殺意念、企圖或計畫</textarea>
+            </div>
+        </div>
+        <div class="context-img">圖片</div>
+        <div class="context-message">
+            所有留言
+
+
+            <p class="cd-message"></p>
+        </div>
+    </div>
+
+    <div class="cn-footer">
+        @Html.ActionLink("留言", "PostArticle", "Member")
+        <p>按讚</p>
+        <p>分享</p>
+    </div>
+
+</div>
+

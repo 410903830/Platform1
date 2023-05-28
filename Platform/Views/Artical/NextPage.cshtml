@@ -1,0 +1,396 @@
+﻿
+@{
+    ViewBag.Title = "NextPage";
+    Layout = "~/Views/Shared/_LayoutNextPage.cshtml";
+}
+
+
+<style>
+
+    body {
+        background-color: #ffffff;
+    }
+
+
+    .row {
+        width: 100%;
+        columns: 2;
+    }
+
+    .header {
+        height: 50px;
+        background-color: #A4DA8A;
+        display: flex;
+        justify-items: flex-start;
+        align-items: center;
+    }
+
+    .header-name {
+        color: white;
+        width: 100%;
+        height: 100%;
+        font-family: fantasy;
+        font-size: 30px;
+        padding-left: 50px;
+    }
+
+    .header .ls {
+        float: right;
+        margin-top: 8px;
+        margin-right: 2%;
+        column-count: 3;
+    }
+
+    .index {
+        background-color: #bebcbc;
+        width: 100%;
+        height: 40px;
+        columns: 2;
+        border-radius: 0px 0px 15px 15px;
+    }
+
+    .index-name {
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+        font-family: DFKai-sb;
+        display: flex;
+        align-items: center;
+        margin-left: 4%;
+    }
+
+    .index-list {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-evenly;
+        float: right;
+    }
+
+        .index-list a {
+            font-size: 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+            .index-list a:hover {
+                color: green;
+            }
+
+    .container {
+        width: 70%;
+        height: 100%;
+        background-color: #ffffff;
+        margin: 30px 10% auto auto;
+    }
+
+    .container-list {
+        width: 90%;
+        height: 300px;
+        border-radius: 10px;
+        column-count: 2;
+        background-color: rgb(244, 244, 244);
+    }
+
+    .context {
+        width: 100%;
+        height: 100%;
+    }
+
+    .context-title {
+        margin: 10px auto auto 20px;
+        font-size: 20px;
+        font-weight: bolder;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .context-text {
+        margin: 10px auto auto 20px;
+        height: 60%;
+    }
+
+    .context-footer {
+        column-count: 3;
+        margin: 10px auto auto 20px;
+    }
+
+    .poster {
+        color: rgb(165, 165, 165);
+        font-size: 15px;
+        font-weight: bolder;
+    }
+
+    .post-time {
+        color: rgb(165, 165, 165);
+        font-size: 15px;
+        font-weight: bolder;
+        margin-left: -30px;
+    }
+
+    .post-icon i {
+        padding-left: 20px;
+        font-size: 16px;
+        color: rgb(165, 165, 165);
+    }
+
+        .post-icon i:hover {
+            color: black;
+        }
+
+    .content {
+        width: 100%;
+        height: 100%;
+    }
+
+    .content-img {
+        margin-top: -10px;
+        float: right;
+        margin-right: 10%;
+    }
+
+    .content-dot {
+        height: 25px;
+        margin-left: 20px;
+        margin-top: 1px;
+        font-size: 20px;
+        color: rgb(165, 165, 165);
+    }
+
+        .content-dot:hover {
+            color: black;
+        }
+
+    .content-dot-su {
+        width: 100px;
+        height: 100px;
+        margin-left: -80px;
+        display: block;
+        z-index: 1;
+        position: relative;
+    }
+
+        .content-dot-su .bi {
+            width: 100%;
+            font-size: 20px;
+            background-color: rgb(255, 255, 255);
+            color: rgb(165, 165, 165);
+            border: none;
+            margin: auto;
+        }
+
+            .content-dot-su .bi:hover {
+                color: black;
+            }
+
+
+
+
+    footer {
+        margin-top: 50px;
+        width: 100%;
+        height: 100%;
+    }
+
+        footer .information {
+            width: 100%;
+            height: 100px;
+            background-color: #A4DA8A;
+            padding-top: 15px;
+        }
+
+            footer .information p {
+                font-weight: 900;
+                font-size: 15px;
+                line-height: 10px;
+                text-align: center;
+                margin-top: 10px;
+                color: white;
+            }
+
+        footer .information-buttom {
+            height: 40px;
+            font-size: 20px;
+            font-weight: 700;
+            background-color: #6D935C;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+</style>
+
+
+
+<div class="index">
+    <div id="index-name" class="index-name">暱稱,早上好</div>
+    <div class="index-list">
+        <a href="" class="hint">工作</a>
+        <a href="" class="hint">健康</a>
+        <a href="" class="hint">學業</a>
+        <a href="" class="hint">家庭</a>
+        <a href="" class="hint">經濟</a>
+    </div>
+</div>
+<div class="container">
+    <div class="container-list">
+
+        <div class="context">
+            <div class="context-title"><a href="https://www.healthsp.org/article/depression_prevention_treatment" target="_blank">如何知道自己有憂鬱症？憂鬱症發作、前兆、症狀、治療，醫師來解答</a></div>
+            <div class="context-text">憂鬱症是一種精神官能症，對人事物失去興趣甚至感到悲傷，且持續一段時間，初期不容易被發現。憂鬱症和單純情緒不好是不一樣的，多數人不會再難過低潮的情緒持續太久，但憂鬱症會維持相當長的一段時間，對於人的感受、行為和思考都會造成影響，嚴重的會造成身體機能問題，影響正常的起居生活、睡眠和工作...</div>
+            <div class="context-footer">
+                <div class="poster">發布者:</div>
+                <div class="post-time">2023-3-30 14:02</div>
+                <div class="post-icon">
+                    <i class="bi bi-hand-thumbs-up-fill"></i>
+                    <i class="bi bi-chat-text-fill"></i>
+                    <i class="bi bi-share-fill"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-dot">
+                <i class="bi bi-three-dots"></i>
+                <div class="content-dot-su">
+                    <button class="bi bi-star-fill">收藏</button>
+                    <button class="bi bi-exclamation-triangle-fill">檢舉</button>
+                </div>
+
+            </div>
+            <div class="content-img">
+                <img src="A.png" width="350px" height="260px" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-list">
+
+        <div class="context">
+            <div class="context-title"><a href="https://www.healthsp.org/article/depression_prevention_treatment" target="_blank">如何知道自己有憂鬱症？憂鬱症發作、前兆、症狀、治療，醫師來解答</a></div>
+            <div class="context-text">憂鬱症是一種精神官能症，對人事物失去興趣甚至感到悲傷，且持續一段時間，初期不容易被發現。憂鬱症和單純情緒不好是不一樣的，多數人不會再難過低潮的情緒持續太久，但憂鬱症會維持相當長的一段時間，對於人的感受、行為和思考都會造成影響，嚴重的會造成身體機能問題，影響正常的起居生活、睡眠和工作...</div>
+            <div class="context-footer">
+                <div class="poster">發布者:</div>
+                <div class="post-time">2023-3-30 14:02</div>
+                <div class="post-icon">
+                    <i class="bi bi-hand-thumbs-up-fill"></i>
+                    <i class="bi bi-chat-text-fill"></i>
+                    <i class="bi bi-share-fill"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-dot">
+                <i class="bi bi-three-dots"></i>
+                <div class="content-dot-su">
+                    <button class="bi bi-star-fill">收藏</button>
+                    <button class="bi bi-exclamation-triangle-fill">檢舉</button>
+                </div>
+
+            </div>
+            <div class="content-img">
+                <img src="A.png" width="350px" height="260px" alt="">
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="container-list">
+
+        <div class="context">
+            <div class="context-title"><a href="https://www.healthsp.org/article/depression_prevention_treatment" target="_blank">如何知道自己有憂鬱症？憂鬱症發作、前兆、症狀、治療，醫師來解答</a></div>
+            <div class="context-text">憂鬱症是一種精神官能症，對人事物失去興趣甚至感到悲傷，且持續一段時間，初期不容易被發現。憂鬱症和單純情緒不好是不一樣的，多數人不會再難過低潮的情緒持續太久，但憂鬱症會維持相當長的一段時間，對於人的感受、行為和思考都會造成影響，嚴重的會造成身體機能問題，影響正常的起居生活、睡眠和工作...</div>
+            <div class="context-footer">
+                <div class="poster">發布者:</div>
+                <div class="post-time">2023-3-30 14:02</div>
+                <div class="post-icon">
+                    <i class="bi bi-hand-thumbs-up-fill"></i>
+                    <i class="bi bi-chat-text-fill"></i>
+                    <i class="bi bi-share-fill"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-dot">
+                <i class="bi bi-three-dots"></i>
+                <div class="content-dot-su">
+                    <button class="bi bi-star-fill">收藏</button>
+                    <button class="bi bi-exclamation-triangle-fill">檢舉</button>
+                </div>
+
+            </div>
+            <div class="content-img">
+                <img src="A.png" width="350px" height="260px" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-list">
+
+        <div class="context">
+            <div class="context-title"><a href="https://www.healthsp.org/article/depression_prevention_treatment" target="_blank">如何知道自己有憂鬱症？憂鬱症發作、前兆、症狀、治療，醫師來解答</a></div>
+            <div class="context-text">憂鬱症是一種精神官能症，對人事物失去興趣甚至感到悲傷，且持續一段時間，初期不容易被發現。憂鬱症和單純情緒不好是不一樣的，多數人不會再難過低潮的情緒持續太久，但憂鬱症會維持相當長的一段時間，對於人的感受、行為和思考都會造成影響，嚴重的會造成身體機能問題，影響正常的起居生活、睡眠和工作...</div>
+            <div class="context-footer">
+                <div class="poster">發布者:</div>
+                <div class="post-time">2023-3-30 14:02</div>
+                <div class="post-icon">
+                    <i class="bi bi-hand-thumbs-up-fill"></i>
+                    <i class="bi bi-chat-text-fill"></i>
+                    <i class="bi bi-share-fill"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-dot">
+                <i class="bi bi-three-dots"></i>
+                <div class="content-dot-su">
+                    <button class="bi bi-star-fill">收藏</button>
+                    <button class="bi bi-exclamation-triangle-fill">檢舉</button>
+                </div>
+
+            </div>
+            <div class="content-img">
+                <img src="A.png" width="350px" height="260px" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-list">
+
+        <div class="context">
+            <div class="context-title"><a href="https://www.healthsp.org/article/depression_prevention_treatment" target="_blank">如何知道自己有憂鬱症？憂鬱症發作、前兆、症狀、治療，醫師來解答</a></div>
+            <div class="context-text">憂鬱症是一種精神官能症，對人事物失去興趣甚至感到悲傷，且持續一段時間，初期不容易被發現。憂鬱症和單純情緒不好是不一樣的，多數人不會再難過低潮的情緒持續太久，但憂鬱症會維持相當長的一段時間，對於人的感受、行為和思考都會造成影響，嚴重的會造成身體機能問題，影響正常的起居生活、睡眠和工作...</div>
+            <div class="context-footer">
+                <div class="poster">發布者:</div>
+                <div class="post-time">2023-3-30 14:02</div>
+                <div class="post-icon">
+                    <i class="bi bi-hand-thumbs-up-fill"></i>
+                    <i class="bi bi-chat-text-fill"></i>
+                    <i class="bi bi-share-fill"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="content-dot">
+                <i class="bi bi-three-dots"></i>
+                <div class="content-dot-su">
+                    <button class="bi bi-star-fill">收藏</button>
+                    <button class="bi bi-exclamation-triangle-fill">檢舉</button>
+                </div>
+
+            </div>
+            <div class="content-img">
+                <img src="A.png" width="350px" height="260px" alt="">
+            </div>
+        </div>
+
+    </div>
+
+</div>
