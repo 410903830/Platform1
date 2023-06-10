@@ -11,11 +11,39 @@
     .window_content {
         position: relative;
         width: 400px;
-        height: 650px;
+        height: fit-content;
         margin: 0 auto;
         top: 20px;
+        padding-bottom:20px;
         border-radius: 5px;
         background-color: #ffffff;
+    }
+
+    .verif{
+        text-align:center;
+        margin-left:100px;
+    }
+
+    .verif .verif_btn {
+        border: none;
+        color: #cccaca;
+        background-color:#ffffff;
+    }
+    .verif .verif_btn:hover {
+        color: #000000;
+    }
+
+    @@media screen and (max-width:769px) {
+        .window_content {
+            position: relative;
+            width: 100%;
+            height: fit-content;
+            margin: 0 auto;
+            top: 20px;
+            padding-bottom:20px;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
     }
 </style>
 
@@ -58,6 +86,11 @@
                         @Html.EditorFor(model => model.code, new { htmlAttributes = new { @class = "form-control", placeholder = "驗證碼", @style = "background-color:#F2ECE2;" } })
                         @Html.ValidationMessageFor(model => model.code, "", new { @class = "text-danger" })
                     </div>
+               
+                    <div class="verif">
+                        <button class="verif_btn">傳送驗證碼</button>
+                    </div>
+
                     <div style="position: relative; display: table; margin: 15px auto; width: 250px;">
                         @Html.EditorFor(model => model.birthday, new { htmlAttributes = new { @class = "form-control", @style = "background-color:#F2ECE2;" } })
                         @Html.ValidationMessageFor(model => model.birthday, "", new { @class = "text-danger" })
@@ -66,7 +99,7 @@
                         <input type="submit" value="註冊" class="btn btn-default  form-control" , style="background-color:#97CD7D;" />
                     </div>
                 </div>
-
+ 
             }
 
         </div>

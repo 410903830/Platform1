@@ -1,0 +1,187 @@
+﻿
+@{
+    ViewBag.Title = "發布文章";
+    Layout = "~/Views/Shared/_LayoutPostArticle.cshtml";
+}
+
+<style>
+
+    body {
+        background-color: #DBF0D0;
+    }
+
+    .header {
+        position:fixed;
+        width:100%;
+        height: 75px;
+        background-color: #A4DA8A;
+        border-radius: 10px;
+        position: sticky;
+        top: 0;
+    }
+
+    .header-name {
+        color: white;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        font-family: fantasy;
+        font-size: 30px;
+        padding-left: 50px;
+        margin-top:15px;
+    }
+
+    .row {
+        width: 100%;
+        columns: 2;
+    }
+
+    .header-list {
+        width: 70%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        float: right;
+        margin-top:33px;
+    }
+
+        .header-list a {
+            font-size: 20px;
+            padding-bottom: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+    .hint:hover {
+        font-size: 25px;
+        font-weight: 900;
+        color: #2b7008;
+    }
+
+    .container {
+        width: 60%;
+        height: 525px;
+        background-color: white;
+        margin: 50px auto 50px auto;
+        border-radius: 10px;
+    }
+
+
+    footer {
+        position: relative;
+        height: 3em;
+        width: 100%;
+        text-align: center;
+        bottom: 0%;
+    }
+
+    .select {
+        columns: 80px;
+        margin: 0 0 0 5%;
+    }
+
+        .select p {
+            font-size: large;
+            font-weight: bold;
+            font-family: fantasy;
+        }
+
+        .select select {
+            margin-top: 17%;
+            outline: 0;
+            border: 0;
+            background-color: antiquewhite;
+            width: 10em;
+            height: 3em;
+            font-size: 10px;
+            font-weight: bold;
+            border-radius: 0.5em;
+            padding: 0.5em;
+            color: rgb(114, 113, 113);
+        }
+
+    .container .context .context-title input {
+        font-size:30px;
+        width:80%;
+        margin:10px auto auto 5%;
+        border:none;
+    }
+
+    .container .context .context-text textarea {
+        font-size: 30px;
+        width: 80%;
+        height:200px;
+        margin: 10px auto auto 5%;
+        border: none;
+        resize:none;
+    }
+
+    .container .context .context-url input {
+        font-size: 30px;
+        width: 80%;
+        margin: 10px auto auto 5%;
+        border: none;
+    }
+
+
+    .container .context .upload{
+        background-color:white;
+        border:none;
+        border-radius:15px;
+        font-size:15px;
+
+    }
+
+    .container .context .upload:hover{
+       background-color:red;
+
+    }
+
+
+
+    .container .submit {
+        background-color: #A4DA8A;
+        border-radius: 50px;
+        width: 80px;
+        height: 50px;
+        float:right;
+        margin: 80px 5% auto auto;
+    }
+</style>
+
+<div class="container">
+
+    <div class="select">
+        <p>發布文章</p>
+        <select name="" id="">
+            <option selected disabled style="display: none;">選擇看板</option>
+            <option value="工作版">工作版</option>
+            <option value="健康版">健康版</option>
+            <option value="學業版">學業版</option>
+            <option value="家庭版">家庭版</option>
+            <option value="經濟版">經濟版</option>
+        </select>
+    </div>
+
+    <div class="context">
+
+        <div class="context-title">
+        <input type="text" name="標題" placeholder="標題">
+        </div>
+
+        <div class="context-text">
+        <textarea type="text" name="內文" placeholder="內文"></textarea>
+        </div>
+
+        <div class="context-url">
+            <input type="text" name="圖片網址" placeholder="圖片網址">
+            <button class="upload">上傳</button>
+        </div>
+            
+
+
+    </div>
+
+    <button class="submit" type="submit">送出</button>
+</div>
+   

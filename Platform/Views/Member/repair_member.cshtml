@@ -12,13 +12,27 @@
     .window_content {
         position: relative;
         width: 400px;
-        height: 550px;
+        height: fit-content;
         margin: 0 auto;
         top: 20px;
+        padding-bottom:20px;
         border-radius: 5px;
         background-color: #ffffff;
     }
 
+
+    @@media screen and (max-width:769px) {
+        .window_content {
+            position: relative;
+            width: 100%;
+            height: fit-content;
+            margin: 0 auto;
+            top: 20px;
+            padding-bottom:20px;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+    }
 
 </style>
 

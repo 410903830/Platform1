@@ -1,0 +1,38 @@
+﻿
+<div class="md">
+
+    <div>
+        <h1 id="month" style="text-align: center; padding-top:20px;">月份</h1>
+    </div>
+
+    <div class="week_list " style="padding-top: 10px;">
+        <ul>
+            <li>SUN</li>
+            <li>Mon</li>
+            <li>TUE</li>
+            <li>WED</li>
+            <li>THU</li>
+            <li>FRI</li>
+            <li>SAT</li>
+        </ul>
+    </div>
+
+    <div class="week_list">
+        <ul id="day"></ul>
+    </div>
+</div>
+
+<div style="text-align: center; padding-top: 70px;">
+    <input type="button" id="button" class="button" value="簽到" onclick="myfun()">
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/date?version=1")
+    @Styles.Render("~/Content/date?version=15")
+}
+
+
+
+
+

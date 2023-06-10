@@ -40,6 +40,30 @@ namespace Platform.Controllers
             return View();
         }
 
+        public ActionResult Check_in()
+        {
+            return View();
+        }
+
+        public ActionResult LoginPage()
+        {
+            return View();
+        }
+
+        public ActionResult Page()
+        {
+            return View();
+        }
+
+        public ActionResult PostArticle()
+        {
+            return View();
+        }
+
+        public ActionResult Message()
+        {
+            return View();
+        }
 
     }
 
