@@ -11,9 +11,10 @@
     }
 
     .header {
+        position:fixed;
+        width:100%;
         height: 75px;
         background-color: #A4DA8A;
-        display: flex;
         border-radius: 10px;
         position: sticky;
         top: 0;
@@ -23,11 +24,11 @@
         color: white;
         width: 100%;
         height: 100%;
-        display: flex;
         align-items: center;
         font-family: fantasy;
         font-size: 30px;
         padding-left: 50px;
+        margin-top:15px;
     }
 
     .row {
@@ -39,9 +40,9 @@
         width: 70%;
         height: 100%;
         display: flex;
-        align-items: flex-end;
         justify-content: space-evenly;
         float: right;
+        margin-top:33px;
     }
 
         .header-list a {
@@ -121,13 +122,9 @@
         margin: 10px auto auto 5%;
         border: none;
     }
-    .container .context .context-btn {
-        width: 80%;
-        margin: -30px auto auto 80%;
-        border: none;
-    }
 
-    .container .context .context-btn  button{
+
+    .container .context .upload{
         background-color:white;
         border:none;
         border-radius:15px;
@@ -135,7 +132,7 @@
 
     }
 
-    .container .context .context-btn button:hover{
+    .container .context .upload:hover{
        background-color:red;
 
     }
@@ -148,7 +145,7 @@
         width: 80px;
         height: 50px;
         float:right;
-        margin: 10% 5% auto auto;
+        margin: 80px 5% auto auto;
     }
 </style>
 
@@ -177,11 +174,11 @@
         </div>
 
         <div class="context-url">
-        <input type="text" name="圖片網址" placeholder="圖片網址">
-        </div>
-        <div class="context-btn">
+            <input type="text" name="圖片網址" placeholder="圖片網址">
             <button class="upload">上傳</button>
         </div>
+            
+
 
     </div>
 

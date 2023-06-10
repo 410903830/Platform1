@@ -199,6 +199,7 @@
     <Content Include="Views\Shared\_LayoutHomePage.cshtml" />
     <Content Include="Views\Artical\NextPage.cshtml" />
     <Content Include="Views\Shared\_LayoutNextPage.cshtml" />
+    <Content Include="Views\Member\Message.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

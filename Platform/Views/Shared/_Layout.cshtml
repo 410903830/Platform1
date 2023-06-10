@@ -22,13 +22,15 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("主頁", "HomePage", "Artical")</li>
                     <li>@Html.ActionLink("登入", "login", "Member")</li>
-                    <li>@Html.ActionLink("忘記密碼", "forget_password", "Member")</li>
                     <li>@Html.ActionLink("會員資料", "member_info", "Member")</li>
-                    <li>@Html.ActionLink("修改資料", "repair_member", "Member")</li>
-                    <li>@Html.ActionLink("註冊", "Sign", "Member")</li>
                     <li>@Html.ActionLink("專家申請", "Apply_expert", "Member")</li>
                     <li>@Html.ActionLink("每日簽到", "Check_in", "Member")</li>
+                    <li>@Html.ActionLink("發布文章", "PostArticle", "Member")</li>
+                    <li>@Html.ActionLink("文章詳情", "Artical_detail", "Artical")</li>
+                    <li>@Html.ActionLink("聊天室", "Message", "Member")</li>
+
                 </ul>
             </div>
         </div>

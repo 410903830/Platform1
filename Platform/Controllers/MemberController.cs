@@ -60,6 +60,11 @@ namespace Platform.Controllers
             return View();
         }
 
+        public ActionResult Message()
+        {
+            return View();
+        }
+
     }
 
 }
